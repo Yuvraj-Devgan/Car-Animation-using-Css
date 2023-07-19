@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Car Animation using Css</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            height: 100vh;
+            background: #ff7676;
+        }
+        .car{
+            width: 250px;
+            height: 120px;
+            border-top-right-radius: 100%;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            background: #0b0b28;
+            display: flex;
+            animation: move 5s linear infinite;
+        }
+        @keyframes move{
+            to{
+                margin-left: 80%;
+            }
+        }
+        .window{
+            width: 50px;
+            height: 50px;
+            background: #fff;
+            border-radius: 6px;
+            margin: 25px 10px 0 15px;
+        }
+        .tail{
+            border-right: 4px solid #fff;
+            border-top: 2px solid #ff7676;
+            border-bottom: 2px solid #ff7676;
+            border-left: 2px solid #ff7676;
+            height: 20vh;
+            position: absolute;
+            z-index: -1;
+            margin-top: -65px;
+            margin-left: -80px;
+            border-radius: 50%;
+            width: 100px
+        }
+        .tyre{
+            display: flex;
+            align-items: center; 
+            justify-content: space-between;
+            animation: move 5s linear infinite;
+            width: 250px;
+        }
+        .tyre div{
+            margin-top: -25px;
+            width: 50px;
+            border-top: 4px solid #fff;
+            border-bottom: 4px solid #fff;
+            border-left: 4px solid #000;
+            border-right: 4px solid #000;
+            height: 50px;
+            border-radius: 50%;
+            background: #000;
+            animation: rotate 2s linear infinite;
+        }
+        @keyframes rotate{
+            to{
+                transform: rotate(360deg);
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="car">
+       <div class="tail"></div>
+        <div class="window"></div>
+        <div class="window"></div>
+    </div>
+    <div class="tyre">
+        <div class="one"></div>
+        <div class="two"></div>
+    </div>
+    
+</body>
+</html>
